@@ -1,0 +1,52 @@
+mport java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ex1 {
+
+        public static void main(String[] args) {
+                InputStreamReader isr = new InputStreamReader(System.in);
+                BufferedReader   input  =       new     BufferedReader(isr);
+                String name = "";
+                System.out.print("What is your name? ");
+                try {
+                        name = input.readLine();
+                } catch (IOException e) {
+
+                        e.printStackTrace();
+                }
+
+                int yearOfBirth = 0;
+                System.out.print("What year were you born? ");
+                try {
+                        yearOfBirth = Integer.parseInt(input.readLine());
+                } catch (IOException e) {
+
+                        e.printStackTrace();
+                }
+                float height = 0;
+                System.out.print("How tall are you?(in m) ");
+                try {
+                        height = Float.parseFloat(input.readLine());
+                } catch (IOException e) {
+
+                        e.printStackTrace();
+                }
+                float weight = 0;
+                System.out.print("What is your weight?(in kg) ");
+                try {
+                        weight = Float.parseFloat(input.readLine());
+                } catch (IOException e) {
+
+                        e.printStackTrace();
+                }
+                System.out.println("Your name is "+ name);
+
+                System.out.println("This yearOfBirth you will turn " + (2023-yearOfBirth));
+                float bodyMass = weight/(height*height);
+
+                System.out.println("Your body mass index is " + (2023-yearOfBirth));
+
+        }
+
+}
